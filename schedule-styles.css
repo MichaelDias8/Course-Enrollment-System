@@ -1,0 +1,88 @@
+.schedule-calendar .time-line {
+    display: inline-block;
+}
+
+.schedule-calendar {
+    display: flex;
+}
+
+.calendar {
+    float: right;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 92%;
+    margin: auto;
+    padding: 1em;
+    height: 43.5em;
+}
+
+.calendar div {
+    flex-grow: 1;
+}
+
+.week-day * {
+    text-align: center;
+}
+
+.week-day .class-time-block {
+    margin: 0.2em;
+    border-radius: 0.5em;
+    border: 1px solid red;
+    padding: 2px;
+}
+
+.placeholder-time-block {
+    margin: 0.21em;
+    border-radius: 0.5em;
+    height: 42px;
+}
+
+.week-day{
+    border: #111111 1px solid;
+    border-radius: 5px;
+    padding: 0.8em;
+    margin: 0.18em;
+    height: 98%;
+    min-height: fit-content + 7em;
+}
+
+.week-day h2 {
+    margin-bottom: 1.05em;
+}
+
+.time-line {
+    margin-top: 1.65em;
+}
+
+.time-line > div {
+    margin-top: 1.7em;
+}
+
+.time p {
+    text-align: right;
+}
+
+.main-content .toggle-view {
+    width: fit-content;
+    margin: 0.2em;
+    text-align: center;
+    padding: 0.1em;
+}
+
+.toggle-btn {
+    background-color: #9d98d1fb;
+    margin: 0.1em;    
+    border: #858585 1px solid;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+.toggle-btn:hover{
+    background-color: #5454e9;
+}
+
+.schedule-header h2 {
+    
+    text-align: center;
+}

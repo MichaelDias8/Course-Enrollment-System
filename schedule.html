@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Course Search</title>
+    <link rel="stylesheet" href="common-styles.css">
+    <link rel="stylesheet" href="schedule-styles.css">
+</head>
+<body>
+    <header>    
+        <h1>My Schedule</h1>
+        <button type="button">Logout</button>
+        <button type="button">Home</button>
+    </header>
+    <div class="main-content">
+        <div class="toggle-view">
+            <button type="button" class="toggle-btn" onclick="toggleView()">Switch to Calendar View</button>
+        </div>
+        <div class="schedule-list">
+            <div class="schedule-header">
+                <h2>First Semester</h2>
+            </div>
+            <div class="schedule-body">
+                <div class="courses">
+                </div>
+            </div>
+        </div>
+        <div class="schedule-list">
+            <div class="schedule-header">
+                <h2>Second Semester</h2>
+            </div>
+            <div class="schedule-body">
+                <div class="courses">
+                </div>
+            </div>
+        </div>
+        <div class="schedule-container">
+            <div class="schedule-header">
+                <h2>First Semester</h2>
+            </div>
+            <div class="schedule-calendar">
+                <div class="time-line">
+                    <div class="time">
+                        <p>8:00am</p>
+                    </div>
+                    <div class="time">
+                        <p>9:00am</p>
+                    </div>
+                    <div class="time">
+                        <p>10:00am</p>
+                    </div>
+                    <div class="time">
+                        <p>11:00am</p>
+                    </div>
+                    <div class="time">
+                        <p>12:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>1:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>2:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>3:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>4:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>5:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>6:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>7:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>8:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>9:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>10:00pm</p>
+                    </div>
+                </div> 
+                <div class="calendar">
+                    <div class="week-day">
+                        <h2>Monday</h2>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                    <div class="week-day">
+                        <div class="header">
+                            <h2>Tuesday</h2>
+                        </div>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                    <div class="week-day">
+                        <div class="header">
+                            <h2>Wednesday</h2>
+                        </div>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                    <div class="week-day">
+                        <div class="header">
+                            <h2>Thursday</h2>
+                        </div>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                    <div class="week-day">
+                        <div class="header">
+                            <h2>Friday</h2>
+                        </div>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="schedule-container">
+            <div class="schedule-header">
+                <h2>Second Semester</h2>
+            </div>
+            <div class="schedule-calendar">
+                <div class="time-line">
+                    <div class="time">
+                        <p>8:00am</p>
+                    </div>
+                    <div class="time">
+                        <p>9:00am</p>
+                    </div>
+                    <div class="time">
+                        <p>10:00am</p>
+                    </div>
+                    <div class="time">
+                        <p>11:00am</p>
+                    </div>
+                    <div class="time">
+                        <p>12:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>1:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>2:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>3:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>4:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>5:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>6:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>7:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>8:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>9:00pm</p>
+                    </div>
+                    <div class="time">
+                        <p>10:00pm</p>
+                    </div>
+                </div> 
+                <div class="calendar">
+                    <div class="week-day">
+                        <h2>Monday</h2>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                    <div class="week-day">
+                        <div class="header">
+                            <h2>Tuesday</h2>
+                        </div>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                    <div class="week-day">
+                        <div class="header">
+                            <h2>Wednesday</h2>
+                        </div>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                    <div class="week-day">
+                        <div class="header">
+                            <h2>Thursday</h2>
+                        </div>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                    <div class="week-day">
+                        <div class="header">
+                            <h2>Friday</h2>
+                        </div>
+                        <div class="scheduled-classes">
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                            <div class="placeholder-time-block"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <script src="schedule-controller.js"></script>
+</body>
+</html>
