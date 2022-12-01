@@ -14,12 +14,14 @@
         <!--Student view-->
         <form class="form" id="studentLogin">
             <h1 class="form__title">Student Login</h1>
-            <div class="form__message form__message--error" id="studentError"></div>
+            <div class="form__message form__message--error" id="studentError"></div> <!--Error message that only gets displayed if the login was unsuccessful-->
 
+            <!--username field-->
             <div class="form__input-group">
                 <input type="text" class="form__input" placeholder="Username" name="username" id="studentUsername">
             </div>
 
+            <!--password field-->
             <div class="form__input-group">
                 <input type="password" class="form__input" placeholder="Password" name="password" id="studentPassword">
             </div>
@@ -33,12 +35,14 @@
         <!--Admin view-->
         <form class="form form--hidden" id="adminLogin">
             <h1 class="form__title">Administrator Login</h1>
-            <div class="form__message form__message--error" id="adminError"></div>
+            <div class="form__message form__message--error" id="adminError"></div> <!--Error message that only gets displayed if the login was unsuccessful-->
 
+            <!--username field-->
             <div class="form__input-group">
                 <input type="text" class="form__input" placeholder="Username" id="adminUsername">
             </div>
 
+            <!--password field-->
             <div class="form__input-group">
                 <input type="password" class="form__input" placeholder="Password" id="adminPassword">
             </div>
