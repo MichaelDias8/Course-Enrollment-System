@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment Login</title>
+    <link rel="stylesheet" href="./login-page.css">
+</head>
+<body>
+
+    <!--Div class that contains the fields used to populate the website-->
+    <div class="container">
+        <!--Student view-->
+        <form class="form" id="studentLogin">
+            <h1 class="form__title">Student Login</h1>
+            <div class="form__message form__message--error" id="studentError"></div>
+
+            <div class="form__input-group">
+                <input type="text" class="form__input" placeholder="Username" name="username" id="studentUsername">
+            </div>
+
+            <div class="form__input-group">
+                <input type="password" class="form__input" placeholder="Password" name="password" id="studentPassword">
+            </div>
+
+            <button class="form__button" type="button" id="studentLoginButton">Login</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="adminLoginView">Administrator Login</a> <!--Switches to the admin view-->
+            </p>
+        </form>
+
+        <!--Admin view-->
+        <form class="form form--hidden" id="adminLogin">
+            <h1 class="form__title">Administrator Login</h1>
+            <div class="form__message form__message--error" id="adminError"></div>
+
+            <div class="form__input-group">
+                <input type="text" class="form__input" placeholder="Username" id="adminUsername">
+            </div>
+
+            <div class="form__input-group">
+                <input type="password" class="form__input" placeholder="Password" id="adminPassword">
+            </div>
+
+            <button class="form__button" type="button" id="adminLoginButton">Login</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="studentLoginView">Student Login</a> <!--Switches to the student view-->
+            </p>
+        </form>
+    </div>
+
+    <script src="./login-page.js"></script>
+</body>
+</html>
