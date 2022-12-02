@@ -25,7 +25,7 @@
 	 
 <h1 class="title">Delete Course</h1>
    
-<form action="delete.php" method="post">
+<form>
 	<br><br> 
 	    <table align="center" border="1px" cellspacing="0px" width="1000px">
 		<tr><th>Course id</th> 
@@ -49,7 +49,7 @@
 			 
 			     while ($row = mysqli_fetch_array($res)){
 				
-				echo'<tr align="center">';
+				echo'<tr class="data-row" align="center">';
 				echo "<td>$row[0]</td>
 				      <td>$row[1]</td>
 					  <td>$row[2]|$row[3]</td>
@@ -70,7 +70,7 @@
 	<br><br>
 	
 <p  align="center">
-<input type ="submit" value="Delete">
+<button type="button" class="delete-btn">Delete</button>
 </p>
 </form>
 	
@@ -80,6 +80,7 @@
 </section>
 
  <script src="/Admin/js/admin_script.js"></script>
+ <script src="/Admin/js/admin_delete_script.js"></script>
 
 </body>
 </html>

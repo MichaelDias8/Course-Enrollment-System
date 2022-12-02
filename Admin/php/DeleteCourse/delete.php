@@ -6,20 +6,18 @@ $link =mysqli_connect('localhost','root','root','schooldb');
 			if(!$link){
 			 exit("databse connect failed");
 			}
-$id=$_POST['id'];
-echo $cid;
- 
-if(isset($_POST['delete'])){
- 
-$query2="delete from course where courseID='$id' ";
 			
-if (mysqli_query($link, $query2)) {
-$message[] = 'Course deleted successfully!';}
+$id=$_GET['courseID'];
+ 
+if($_GET['delete'] == 'Delete'){
+ 
+	$query2="delete from course where courseID='$id' ";
+			
+	if (mysqli_query($link, $query2)) {
+		$message[] = 'Course deleted successfully!';}
 	else{ 
-die ("Error while trying to add new course". mysqli_error($link));
+		die ("Error while trying to delete a course". mysqli_error($link));
 	}
-	
-               
 }
 
 ?>
@@ -41,28 +39,29 @@ die ("Error while trying to add new course". mysqli_error($link));
 </head>
 <body>
    
-<?php include 'admin_header.php'; ?>
+<?php include '../Main/admin_header.php'; ?>
 <?php
+	//$id=$_GET['courseID'];
 	session_start();
 	$link =mysqli_connect('localhost','root','root','schooldb');
 			if(!$link){
 			 exit("databse connect failed");
 			}
-	$cid=$_POST['course_id'];
 	  
      
 	
-	$res=mysqli_query($link,"select * from course where courseID = '$cid' " );
+	$res=mysqli_query($link,"select * from course where courseID = '$id' " );
 	
     
 		$row = mysqli_fetch_array($res);
+		if($row){
 			 
 			  echo '<section class="add-course">';  
-	          echo '<form action="" method="post" enctype="multipart/form-data">';
+	          echo '<form action="" method="GET" enctype="multipart/form-data">';
               echo'<h3 align="center">Are you want delete this course?</h3>';
 			  echo "<br>";
 		      echo'<div align="center">';
-			  echo "Course ID --  <input type='text' name='id' value = $cid readonly>";
+			  echo "Course ID --  <input type='text' name='courseID' value='$id' readonly>";
 		      echo"<br>";
 			  echo "Course Name  --    $row[1] ";
 			  echo"<br>";
@@ -81,9 +80,9 @@ die ("Error while trying to add new course". mysqli_error($link));
 	     	  echo  "Subject ID  --  $row[8]";
 			  echo"<br><br><br>"; 			 			
 			  echo'</div>';
-			  echo" <p align='center'> <input type='submit' name='delete' value ='Delete' class='btn'></p
+			  echo" <p align='center'> <input type='submit' name='delete' value ='Delete' class=' btn'></p
 			  >";
- 
+		}
 	?>
 	
 	 </form>  			

@@ -5,8 +5,7 @@ if(isset($message)){
       <div class="message">
          <span>'.$message.'</span>
          <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-      </div>
-      ';
+      </div>';
    }
 }
 ?>
@@ -30,7 +29,7 @@ if(isset($message)){
       </div>
       <div class="account-box">
          <p></p>
-         <div><a href="/Login/html/login.html">Login</a></div>
+         <div><a href="/Login/html/login.html">Log Out</a></div>
       </div>
    </div>
 

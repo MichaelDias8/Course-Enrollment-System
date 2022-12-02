@@ -1,5 +1,5 @@
 <title>Student Account</title>
-<link rel="stylesheet" href="/Student/Account/css/accountCSS.css">
+<link rel="stylesheet" href="/Student/Account/css/account_styles.css">
 
 <h1>Student Account Information is listed below:</h1>
 

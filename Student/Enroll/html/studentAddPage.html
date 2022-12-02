@@ -1,41 +1,40 @@
+<!-- This file constructs the layout of the student add course page. -->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Student Add Course Window</title>
 
-	<link rel="stylesheet" href="/Student/stylestommy.css">
-
+	<link rel="stylesheet" href="/Student/Enroll/css/student_styles.css">
 </head>
 
 <div class="container">
 	<body>
-	<div class="center">
-	<span>
-		<Button id="submitButton"; class="form__button">Submit</Button>
-	</span>
-	
-	<span>
-		Add Course
-	</span>
-		
-	<span>
-		<a href="/Student/Main/html/studentMain.html"><Button id="cancelButton"; class="form__button">Cancel</Button></a>
-	</span>
-	</div>
-	
-	<p>
-	<hr>
-	<p>
-	
-	<li>
-		Input the course ID to search the course: <input type="text" maxlength="10" id="courseidt" class="form__input" placeholder="Enter course id(4 digits)"> 
-		<Button id="searchButton"; class="form__button">Search</Button>
-	</li>
-	
-	
-	<p><span id="dis"></span> </p>
-</div>
 
-	<script type = "text/javascript" src="/Student/Enroll/js/studentAddFunc.js"></script>
-</body>
+		<span>
+			<Button id="submitButton"; class="form__button__left">Submit</Button>	<!-- button to enroll the course -->
+		</span>
+		
+		<span style="font-size: 300%; color: #660FE8; margin-left: 65px;">Add Course</span>
+		
+		<span>
+			<a href="/Student/Main/html/studentMain.html"><Button id="cancelButton"; class="form__button__right">Cancel</Button></a>  <!-- button to return to student main page -->
+		</span>
+		
+		<br><br>
+		<p>
+		<hr>
+		<p>
+		
+		<p>
+			Input the course ID to search the course: <input type="text" maxlength="10" id="courseidt" class="form__input" placeholder="Enter course id(4 digits)"> <!-- place to input the course ID for searching -->
+			<Button id="searchButton"; class="form__button__right">Search</Button>	<!-- button to search the course -->
+		</p>
+		
+		
+		<p><span id="dis"></span> </p>
+</div>
+	
+		<script type = "text/javascript" src="/Student/Enroll/js/studentAddFunc.js"></script>
+	</body>
 </html>

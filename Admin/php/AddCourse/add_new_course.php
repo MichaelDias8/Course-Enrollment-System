@@ -66,7 +66,7 @@ if(isset($_POST['add_course'])){
 	  <p align="left"> Course Description:</p>
 	  <input type="text" name="des" class="box" placeholder="Enter course description" required>
 	  <p align="left"> Subject:</p>
-	  <input type="text" name="subject" class="box" placeholder="Enter subject" required>
+	  <input type="text" name="subject" class="box" placeholder="Enter subject ID" required>
       <input type="submit" value="add course" name="add_course" class="btn">
    </form>
 

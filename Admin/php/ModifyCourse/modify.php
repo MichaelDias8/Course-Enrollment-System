@@ -6,36 +6,32 @@ $link =mysqli_connect('localhost','root','root','schooldb');
 			if(!$link){
 			 exit("databse connect failed");
 			}
-  
-	$id=$_POST['id'];
-	$name=$_POST['name'];
-	$sd=$_POST['start_date'];
-	$ed=$_POST['end_date'];
-    $prof=$_POST['p_fname'];
-	$pros=$_POST['p_lname'];
-	$des=$_POST['des'];
-	$adm="101000";
-	$subject=$_POST['subject'];
-if(isset($_POST['modify'])){
+
+
+	$id = $_GET['id'];
+
+if($_GET['modify'] == 'Modify'){
+	$name=$_GET['name'];
+	$sd=$_GET['start_date'];
+	$ed=$_GET['end_date'];
+    $prof=$_GET['p_fname'];
+	$pros=$_GET['p_lname'];
+	$des=$_GET['des'];
+	$adm=$_GET['adm'];
+	$subject=$_GET['subject'];
  
-	$query2="delete from course where courseID='$id' ";
+	$query2=
+	"UPDATE course 
+     SET courseName ='$name', startDate ='$sd', endDate='$ed', profFirstName='$prof', profLastName='$pros', description ='$des', addby ='$adm', belongto ='$subject' WHERE courseID='$id';";
 			
-if (mysqli_query($link, $query2)) {
- }
+	if (mysqli_query($link, $query2)) {
+		$message[] = 'Course modified successfully!';}
 	else{ 
-die ("Error while trying to modify in first step". mysqli_error($link));
+		die ("Error while trying to modify in second step--". mysqli_error($link));
 	}
-	
-$query2="INSERT INTO course VALUE ('$id', '$name', '$sd', '$ed', '$prof', '$pros', '$des', '$adm', '$subject');";
-			
-if (mysqli_query($link, $query2)) {
-$message[] = 'Course modified successfully!';}
-	else{ 
-die ("Error while trying to modify in second step". mysqli_error($link));
-	}
-	
-               
-}
+
+}    
+
 
 ?>
 
@@ -56,28 +52,26 @@ die ("Error while trying to modify in second step". mysqli_error($link));
 </head>
 <body>
    
-<?php include 'admin_header.php'; ?>
+<?php include '../Main/admin_header.php'; ?>
 <?php
 	session_start();
 	$link =mysqli_connect('localhost','root','root','schooldb');
 			if(!$link){
 			 exit("databse connect failed");
 			}
-	$cid=$_POST['course_id'];
 	  
-     
-	
-	$res=mysqli_query($link,"select * from course where courseID = '$cid' " );
+   
+	$res=mysqli_query($link, 'select * from course where courseID = "' . $id . '"');
 	
     
 		$row = mysqli_fetch_array($res);
 			 
 			  echo '<section class="add-course">';  
-	          echo '<form action="" method="post" enctype="multipart/form-data">';
+	          echo '<form action="modify.php?modify=true" method="GET" enctype="multipart/form-data">';
               echo'<h3 align="center">Modify course information</h3>';
 			  echo "<br>";
 		      echo'<div align="center">';
-			  echo "Course ID -  <input type='text' name='id' value = $cid>";
+			  echo "Course ID -  <input type='text' name='id' value = $id readonly>";
 		      echo"<br>";
 			  echo "Course Name  -  <input type='text' name='name' value = $row[1] >";
 			  echo"<br>";
@@ -91,7 +85,7 @@ die ("Error while trying to modify in second step". mysqli_error($link));
 			  echo"<br>";
 			  echo "Description  -  <input type='textbox' name='des'   value='$row[6]' >";
 			  echo"<br>";
-			  echo  "Administrator ID  -  <input type='text' name='adm'  value =$row[7] >";
+			  echo 'Administrator ID  -  <input type="text" name="adm"  value ="' . $_GET['adm'] . '" readonly>';
 			  echo"<br>";
 	     	  echo  "Subject ID  -  <input type='text' name='subject'  value =$row[8]>";
 			  echo"<br><br><br>"; 			 			

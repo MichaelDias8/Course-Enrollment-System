@@ -57,7 +57,7 @@ function fillLists()
     //Get the student ID from local storage
     var studentID = window.localStorage.getItem("studentID");
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "scheduleDBService.php", true);
+    xhttp.open("POST", "../php/scheduleDBService.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -76,7 +76,7 @@ function fillSchedules()
     var studentID = window.localStorage.getItem("studentID");
    
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "scheduleDBService.php", true);
+    xhttp.open("POST", "../php/scheduleDBService.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -114,7 +114,7 @@ function organiseClasses(dayOfClasses)
                 timeBlock.style.height = "82px";
                 break;
             case 3:
-                timeBlock.style.height = "124px";
+                timeBlock.style.height = "133px";
                 break;
         }
         for(var i = 0; i < classLength; i++)
@@ -122,6 +122,7 @@ function organiseClasses(dayOfClasses)
             dayOfClasses.querySelector(".placeholder-time-block").remove();
         }
         //Based on the time, move the class to the correct time slot
+        console.log(startHour);
         dayOfClasses.querySelectorAll(".placeholder-time-block")[startHour-8].insertAdjacentElement("beforebegin", timeBlock);
         //Change the outline color of classes so they are easier to see
         timeBlock.style.borderColor = intToRGB(hashCode((timeBlock.querySelector("p").textContent)));
