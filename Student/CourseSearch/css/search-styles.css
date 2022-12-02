@@ -1,0 +1,65 @@
+.search-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: #111111 1px solid;
+}
+
+.search-container * {
+    font-size: 1.06em;
+}
+
+.search-container input[type=radio] {
+    position: relative;
+    top: 0.2em;
+    margin-right: 0.2em;
+    height: 1em;
+}
+
+.search-container input[type=text] {
+    text-indent: 0.2em;
+}
+
+.select-year p {
+    display: inline;
+}
+
+.search-container select {
+    border-radius: 1em;
+    padding: 0.2em;
+}
+
+.search-container input {
+    border-radius: 1em;
+}
+
+.search-by-box input {
+    padding: 0.2em;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-left: 4%;
+    padding: 1em;
+    background-color: #483ea3;
+    height: fit-content;
+    min-height: fit-content;
+}
+
+.results-container > button{
+    color: #FFFFFF;
+    font-size: 1.1em;
+    background-color: #3d31e7bd;
+    border: #111111 1px solid;
+    border-radius: 5px;
+    padding: 0.4em;
+    margin: 0.3em;
+}
+
+.results-container > button:hover{
+    color: #FFFFFF;
+    background-color: #221d58b9;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Course Search</title>
+    <link rel="stylesheet" href="/Student/CourseSearch/css/search-styles.css">
+    <link rel="stylesheet" href="/Student/common-styles.css">
+    </script>
+</head>
+<body>
+    <header>    
+        <h1>Course Search</h1>
+        <a href="/Login/html/login.html"><button type="button">Logout</button></a>
+        <a href="/Student/Main/html/studentMain.html"><button type="button">Home</button></a>
+    </header>
+    <div class="main-content">
+        <div class="search-container">
+            <div class="select-module">
+                <select>
+                    <option value="-1">Filter by Module: </option>
+                    <option value="0">All modules</option>
+                </select>
+            </div>
+            <div class="select-semester">
+                <select>
+                    <option value="0">Filter by Semester </option>
+                    <option value="first-semester">First Semester</option>
+                    <option value="second-semester">Second Semester</option>
+                    <option value="summer">Summer</option>
+                    <option value="full-year">Full Year</option>
+                    <option value="any">Any</option>
+                </select>
+            </div>
+            <div class="select-year">
+                <p>Year: </p>
+                <label for="0">All</label>
+                <input type="radio" id="0" name="year" value="0" onchange="fillCourses(this)" checked="checked">
+                <label for="1">1</label>
+                <input type="radio" id="1" name="year" value="1" onchange="fillCourses(this)">
+                <label for="2">2</label>
+                <input type="radio" id="2" name="year" value="2" onchange="fillCourses(this)">
+                <label for="3">3</label>
+                <input type="radio" id="3" name="year" value="3" onchange="fillCourses(this)">
+                <label for="4">4</label>
+                <input type="radio" id="4" name="year" value="4" onchange="fillCourses(this)">
+                <label for="5+">5+</label>
+                <input type="radio" id="5+" name="year" value="5+" onchange="fillCourses(this)">
+            </div> 
+            <div class="search-by-box" id="search-by-name">
+                <input type="text" placeholder="Search by course name&#128269;">
+            </div>
+        </div>
+        <div class="results-container">
+        </div>
+    </div>
+    <script src="/Student/CourseSearch/js/search-controller.js"></script>
+</body>
+</html>
