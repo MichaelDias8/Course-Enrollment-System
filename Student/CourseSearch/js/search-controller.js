@@ -9,7 +9,7 @@ window.onload = function() {
 function fillDropdowns()
 { 
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "courseDBService.php", true);
+    xhttp.open("POST", "../php/courseDBService.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -34,11 +34,12 @@ function fillCourses()
     var courseName = document.querySelector("#search-by-name input").value;
 
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "courseDBService.php", true);
+    xhttp.open("POST", "../php/courseDBService.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.querySelector(".results-container").innerHTML = this.responseText;
+            SetupCourseButtonListeners();
         }
     };
     xhttp.send(`function=get_courses&module=${module}&semester=${semester}&year=${year}&courseName=${courseName}`);
@@ -60,6 +61,17 @@ function setUpEventListeners()
     document.querySelectorAll(".search-by-box input").forEach((element) => {
         element.addEventListener("keyup", function() {
             fillCourses();
+        });
+    });
+}
+
+function SetupCourseButtonListeners()
+{
+    //Set up event listeners for the course buttons
+    document.querySelectorAll(".course-button").forEach((element) => {
+        console.log(element);
+        element.addEventListener("click", function() {
+            alert(`Course ID for ${element.textContent} is ${element.dataset.courseid}`);
         });
     });
 }

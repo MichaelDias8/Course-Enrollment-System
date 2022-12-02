@@ -1,5 +1,5 @@
 <?php
-    require_once 'database.php';
+    require_once '../../../database.php';
     $con = database::connect();
     
     switch ($_POST["function"])

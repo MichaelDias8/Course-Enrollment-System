@@ -1,5 +1,5 @@
 <?php
-    require_once 'database.php';
+    require_once '../../../database.php';
     $con = database::connect();
     
     switch ($_POST["function"])
@@ -72,13 +72,13 @@
 
         global $con;
         
-        $query = 'SELECT * FROM course WHERE ' . $courseName . $semester . $module  . $year;
+        $query = 'SELECT courseID, courseName FROM course WHERE ' . $courseName . $semester . $module  . $year;
         $result = mysqli_query($con, $query);
         if(!$result) {
             die("Get courses query failed.");
         }
         while($row = mysqli_fetch_assoc($result)) {
-            echo "<button data-courseID=" . $row['courseID'] . ">" . $row['courseName'] . "</button>";
+            echo '<button class="course-button" data-courseID="' . $row['courseID'] . '">' . $row['courseName'] . '</button>';
         }
     }
 ?>

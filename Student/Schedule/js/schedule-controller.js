@@ -4,9 +4,6 @@ var semester2Schedule;
 var semester1List;
 var semester2List;
 
-//test 
-var studentID = 100000000;
-
 window.onload = function() {
     //Initialise the element variables
     semester1Schedule = document.querySelectorAll(".schedule-container")[0];
@@ -57,6 +54,8 @@ function toggleView()
 //Fills the list views with data from the database
 function fillLists()
 {
+    //Get the student ID from local storage
+    var studentID = window.localStorage.getItem("studentID");
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "scheduleDBService.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -73,6 +72,9 @@ function fillLists()
 //Fills the calendar views with data from the database
 function fillSchedules()
 {
+    //Get the student ID from local storage
+    var studentID = window.localStorage.getItem("studentID");
+   
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "scheduleDBService.php", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
