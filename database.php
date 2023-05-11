@@ -1,4 +1,7 @@
 <?php
+    /*
+    * This file is used throughout the program to access the database.
+    */
     class database{
         private static $scon;
 
